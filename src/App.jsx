@@ -1,5 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import Header from "./components/Header"
+import Main from "./components/Main"
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
       })
   }
   useEffect(actor, [])
+
+
   function handleClick() {
     setAll([...man, ...girl])
 
@@ -34,12 +38,11 @@ function App() {
 
 
 
-
-
   return (
     <>
-      <div className="content">
-        <h1 className="p-4">VI PRESENTIAMO GLI ATTORI</h1>
+      <Header />
+      <Main handleClick={handleClick} man={man} girl={girl} all={all} />
+      {/*  <div className="content">
         <div className="row g-2 justify-content-center">
           {
             man.map(items => (
@@ -78,8 +81,9 @@ function App() {
             ))
           }
         </div>
-        <button onClick={handleClick} className="btn btn-dark">Press</button>
+        <button onClick={handleClick} className="btn btn-dark">Press</button> 
       </div>
+      }*/}
 
 
     </>
