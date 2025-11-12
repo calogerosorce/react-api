@@ -40,6 +40,8 @@ export default function Main({ handleClick, man, girl, all }) {
                             <p>{items.birth_year}</p>
                             <p>{items.nationality}</p>
                             <p>{items.biography}</p>
+                            <p>{items.awards}</p>
+                            {items.most_famous_movies || items.known_for}
                         </div>
                     ))
                 }
