@@ -19,7 +19,7 @@
 }
 
 .card {
-  min-width: 20%;
+  max-width: 100%;
   color: white;
   border: solid 1px lightgray;
   background-color: #1d1c1c;
